@@ -13,19 +13,19 @@ sapsid = "A4H"
 #Email recepient to receive notifications related to autoscaling
 alertrecepient = "robert.schaftlein@dxc.com;arno.westhuis@dxc.com;milan.kerni@dxc.com"
 #Name of the Onprem data gateway to be used by logicapp SAP connector. This should already be installed and configured
-odgname = "kvscalinggw"
+odgname = "autoscaling"
 #Resource group of the Onprem data gateway
-odgresourcegroup = "kvsapautoscaling"
+odgresourcegroup = "RG_SAP"
 #Location of the Onprem data gateway
-odglocation = "WestCentralUS"
+odglocation = "WestEurope"
 #Instance number of the SAP system to be configured for autoscaling
 sapinstnacenr = 00
 #SAP User to be used by logon group registration logic app
 sapregisteruser = "demouser"
 #SAP System Client number
-sapclient = "000"
+sapclient = "001"
 #SAP Message server host. This will be used to configure RFC connection to be used by logic app SAP connector
-sapmshost = "172.16.3.6"
+sapmshost = "10.0.0.5"
 #SAP message server port. This will be used to configure RFC connection to be used by logic app SAP connector
 sapmsport = "3600"
 #SAP Logongroup. This will be used to configure RFC connection to be used by logic app SAP connector
@@ -34,19 +34,19 @@ saplogongroup = "PUBLIC"
 scalingconfig = {
      sap1 = {
 CurrentAppCount = 1
-MaxAppCount = 4
+MaxAppCount = 2
 MinAppAcount = 1
 SAPAppLoadBalancer = "app-lb"
-SAPAppNamingPrefix = "tst-app-avm-"
+SAPAppNamingPrefix = "sap-Lin-app"
 SAPAppVmSize = "Standard_D2s_v3"
-SAPCustomImageid = "/subscriptions/afbba066-2190-4c21-b9ec-4a945b7bfbcc/resourceGroups/sap-images-rg/providers/Microsoft.Compute/galleries/s4hana1809.sles12/images/SAP-APP"
+SAPCustomImageid = "/subscriptions/37747b46-8fab-45db-a2ba-2984926a1870/resourceGroups/RG_SAP/providers/Microsoft.Compute/images/sap-Lin-app01-image-20210201135657"
 SAPDeleteTimeout = 10
-SAPImageHostName = "tst-app-avm-0"
+SAPImageHostName = "sap-Lin-app0"
 SAPInstanceNr = 00
 SAPLogonGroups = "PUBLIC,TEST"
-SAPRegion = "NorthEurope"
-SAPResourceGroup = "SAP-Hack-Demo"
-SAPServerGroups = "parallel_generators,TESTSERVERGROUP"
+SAPRegion = "WestEurope"
+SAPResourceGroup = "RG_SAP"
+SAPServerGroups = "parallel_generators"
 SAPShutdownTimeout = 10
 SAPAvSet = "APP-AVSET"
 SAPSubnet = "sap-subnet"
