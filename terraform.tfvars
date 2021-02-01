@@ -49,7 +49,7 @@ SAPResourceGroup = "RG_SAP"
 SAPServerGroups = "parallel_generators"
 SAPShutdownTimeout = 10
 SAPAvSet = "APP-AVSET"
-SAPSubnet = "sap-subnet"
-SAPVnet = "sap-vnet"
+SAPSubnet = "default"
+SAPVnet = "SAPCALDefault-westeurope"
 }
 }
