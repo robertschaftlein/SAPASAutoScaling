@@ -1,5 +1,5 @@
 #ResourceGroup to deploy resources related to autoscaling
-rgname = "sapautoscale-test1"
+rgname = "RG_SAP"
 #Location to deploy resources related to autoscaling
 location = "WestEurope"
 #Storage account name to be used for autoscaling config
@@ -9,9 +9,9 @@ automationaccount = "sapautoscale12"
 #Name of the LogicApp to be used for logon group registration
 logicapp-sapregister = "logicapp-sapregister12"
 #SAP System ID for which autoscaling is configured. 
-sapsid = "TST"
+sapsid = "A4H"
 #Email recepient to receive notifications related to autoscaling
-alertrecepient = "kavenka@microsoft.com"
+alertrecepient = "robert.schaftlein@dxc.com;arno.westhuis@dxc.com;milan.kerni@dxc.com"
 #Name of the Onprem data gateway to be used by logicapp SAP connector. This should already be installed and configured
 odgname = "kvscalinggw"
 #Resource group of the Onprem data gateway
